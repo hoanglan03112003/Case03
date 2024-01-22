@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import CarItem from './CarItem'
 import Products from '../Page/Products'
 import { useSelector } from 'react-redux';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
     const count = useSelector(state => state.counter.value)
@@ -30,6 +32,7 @@ const Header = () => {
                             <li className="nav-item dropdown">
                                 <a className=" position-relative nav-link dropdown-toggle" href="#" id="navbarDropdownCart" data-bs-auto-close="outside" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
+                                    <FontAwesomeIcon icon={faCartShopping} />
                                     <span className="position-absolute top-2 end-100 badge badge-pill bg-danger">{count}</span>
                                 </a>
 
